@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HeroImg from "../../assets/hero.jpeg";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-7xl">
-      <aside className="relative sm:h-screen overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
+      <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
         <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:pt-[10rem] sm:pb-[6rem] mx-auto sm:px-6 lg:px-8">
           <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-left sm:text-left sm:mr-auto">
             <h2 className="text-3xl font-bold sm:text-5xl">
@@ -21,7 +19,8 @@ export default function Home() {
             <div className="flex gap-4 flex-wrap">
               <Link
                 className=" inline-flex text-white items-center px-7 py-3 font-medium bg-black rounded-lg hover:opacity-75"
-                to="/"
+                to="https://hitune.surge.sh/"
+                target="_blank"
               >
                 Get Started
               </Link>
@@ -58,7 +57,7 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-20">
             <div className="flex flex-col items-center justify-center space-y-2 text-center">
-              <HeadphonesIcon className="h-12 w-12 mx-auto" />
+              <HeadphonesIcon className="h-12 text-green-700 w-12 mx-auto" />
               <h3 className="text-xl font-bold">Personalized Playlists</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Your soundtrack. Your mood. Your music. Let our personalized
@@ -66,7 +65,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2 text-center">
-              <DownloadCloudIcon className="h-12 w-12 mx-auto" />
+              <DownloadCloudIcon className="h-12 text-green-700 w-12 mx-auto" />
               <h3 className="text-xl font-bold">Offline Listening</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Take your music anywhere. Download your favorite tracks and
@@ -74,7 +73,7 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2 text-center">
-              <MusicIcon className="h-12 w-12 mx-auto" />
+              <MusicIcon className="h-12 text-green-700 w-12 mx-auto" />
               <h3 className="text-xl font-bold">Curated Recommendations</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 Discover new music. Our expert curators handpick the best songs
@@ -97,13 +96,13 @@ export default function Home() {
           </div>
           <div className="mx-auto w-full max-w-sm space-y-2">
             <form className="flex space-x-2">
-              <Input
-                className="max-w-lg flex-1"
+            <input
+                className="max-w-lg flex-1 border-[1px] px-1 py-2 outline-none"
                 placeholder="Enter your email"
                 type="email"
               />
-              <Button type="submit">Sign Up</Button>
-            </form>
+              <button className='bg-green-600 px-4 rounded-sm text-white' type="submit">Sign Up</button>
+             </form>
             <p className="text-xs text-gray-500 dark:text-gray-400">
               Sign up to get notified when we launch.
               <Link className="underline underline-offset-2" href="#">
